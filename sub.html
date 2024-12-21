@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+    <style>
+        body {
+            font-family:monospace;
+            background-color:#5b4000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding-top:30vh;
+        }
+        .password-container {
+            text-align: center;
+            background: #ffb200;
+            padding: 10px 10px 10px 10px;
+            height:220px;
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            margin: 10px;
+            
+        }
+        .password-container h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+            display:inline;
+        }
+         .password-container h1 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #a12100;
+            font-family: fantasy;
+            font-weight: bold;
+           }
+        .password-container input {
+            padding: 10px;
+            font-size: 16px;
+            width: 90%;
+            margin-bottom: 10px;
+            border: 2px dashed #ff892b;
+            border-radius: 6px;
+        }
+        .password-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color:#e25400;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .password-container button:hover {
+            background-color: #45a049;
+        }
+        .pass{
+            height:18px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container">
+        <h1>Get Exclusive Access</h1>
+        <p style="font-size:15px;color:#331700;">Step-1</p>
+        <img class="pass" src="https://img.icons8.com/?size=100&id=23206&format=png&color=000000" alt="No Internet">
+        <h2>Enter Password</h2>
+        
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error" style="color: red; display: none;">Incorrect password, try again!</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const correctPassword = "2e4t6"; // Change this to your desired password
+            const userPassword = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error");
+
+            if (userPassword === correctPassword) {
+                window.location.href = "phwide1.html"; // Redirect to your main page
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
